@@ -1,0 +1,49 @@
+/* ========================================
+   RESPONSIVE — TABLET (≤ 900px)
+======================================== */
+@media (max-width: 900px) {
+  #desktop-nav { padding: 1rem 2rem; }
+
+  .accueil-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .accueil-photo { order: -1; }
+  .photo-frame { width: 200px; height: 200px; }
+  .hero-title { font-size: clamp(2.8rem, 10vw, 4.5rem); }
+
+  .entreprise-grid { grid-template-columns: 1fr; }
+  .veille-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+  .articles-grid { grid-template-columns: repeat(2, 1fr); }
+  .bilan-grid { grid-template-columns: 1fr; }
+  .real-body { grid-template-columns: 1fr; gap: 1rem; }
+
+  .abware-kpis { grid-template-columns: repeat(2, 1fr); }
+  .si-row { flex-direction: column; gap: 1rem; }
+}
+
+/* ========================================
+   RESPONSIVE — MOBILE (≤ 600px)
+======================================== */
+@media (max-width: 600px) {
+  #desktop-nav { display: none; }
+  #hamburger-nav {
+    display: flex;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    justify-content: space-between; align-items: center;
+    padding: 1rem 1.5rem;
+    background: rgba(12,12,16,.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .hamburger-menu { position: relative; }
+
+  section { padding: 5rem 1.2rem 3rem; }
+  .accueil-grid { gap: 2rem; }
+  .hero-title { font-size: 2.8rem; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .abware-kpis { grid-template-columns: repeat(2, 1fr); }
+  .accueil-btns { flex-direction: column; }
+  .contact-links { flex-direction: column; align-items: center; }
+  .company-tabs { flex-direction: column; }
+  .tab-btn { text-align: left; }
+  .real-header { flex-wrap: wrap; gap: 1rem; }
+  .real-number { font-size: 2rem; }
+}
